@@ -1,0 +1,15 @@
+{
+  "name": "finalproject-do-it-for-me",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm start --prefix server & npm start --prefix client",
+    "build": "npm run build --prefix client",
+    "predeploy": "npm run build",
+    "deploy": "npm run deploy --prefix server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
