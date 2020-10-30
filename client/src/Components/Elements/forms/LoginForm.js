@@ -16,16 +16,10 @@ export const LoginForm = () => {
     handleLoginForm,
   } = useSignupForm();
   useEffect(() => {
-    if (user.logged && location.state && location.state.provideAService) {
-      navigate(`/profile`, {
-        state: { provideAService: true },
+    if (user.logged ) {
+      navigate(-1 , {
+        state: location.state,
       });
-    } else if (user.logged && location.state.profile) {
-      navigate(`/profile`);
-    } else if (user.logged && location.state.booking) {
-      navigate(`/search-result`);
-    } else if (user.logged) {
-      navigate(-1);
     }
   }, [user]);
   return (
