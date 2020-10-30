@@ -1,6 +1,6 @@
 import React, { useState, useContext } from "react";
 import { navigate } from "@reach/router";
-import { BROWSER_ENDPOINT } from "../../../config";
+/* import { BROWSER_ENDPOINT } from "../../../config"; */
 import { StyledCard } from "../../Styled-Components/StyledCard";
 import StarRate from "../shared/StarRate";
 import Booking from "./Booking";

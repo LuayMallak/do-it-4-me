@@ -5,7 +5,7 @@ import ErrorMsg from "../shared/ErrorMsg";
 import useSignupForm from "../../../data/useSignupForm";
 import UserContext from "../../../data/UserContext";
 import { Link, useLocation, navigate } from "@reach/router";
-import { BROWSER_ENDPOINT, SERVER_ENDPOINT } from "../../../config";
+/* import { BROWSER_ENDPOINT, SERVER_ENDPOINT } from "../../../config"; */
 export const LoginForm = () => {
   const location = useLocation();
   const { handleLoggedInUser, user } = useContext(UserContext);
@@ -17,13 +17,13 @@ export const LoginForm = () => {
   } = useSignupForm();
   useEffect(() => {
     if (user.logged && location.state && location.state.provideAService) {
-      navigate(`${BROWSER_ENDPOINT}/profile`, {
+      navigate(`/profile`, {
         state: { provideAService: true },
       });
     } else if (user.logged && location.state.profile) {
-      navigate(`${BROWSER_ENDPOINT}/profile`);
+      navigate(`/profile`);
     } else if (user.logged && location.state.booking) {
-      navigate(`${BROWSER_ENDPOINT}/search-result`);
+      navigate(`/search-result`);
     } else if (user.logged) {
       navigate(-1);
     }
