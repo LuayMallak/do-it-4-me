@@ -17,13 +17,13 @@ export const LoginForm = () => {
   } = useSignupForm();
   useEffect(() => {
     if (user.logged && location.state && location.state.provideAService) {
-      navigate(`/profile`, {
+      navigate(`${BROWSER_ENDPOINT}/profile`, {
         state: { provideAService: true },
       });
     } else if (user.logged && location.state.profile) {
-      navigate(`/profile`);
+      navigate(`${BROWSER_ENDPOINT}/profile`);
     } else if (user.logged && location.state.booking) {
-      navigate(`search-result`);
+      navigate(`${BROWSER_ENDPOINT}/search-result`);
     } else if (user.logged) {
       navigate(-1);
     }
