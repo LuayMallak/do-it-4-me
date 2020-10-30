@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import colors from "./General-Styles/colors";
 import heroImage from "../../images/heroImage.jpg";
+
 export const StyledHeroSection = styled.div`
   padding-top: 6rem;
   width: 100%;

@@ -20,7 +20,7 @@ const Card = (props) => {
     if (searcher && searcher._id) {
       setBookingExtend(true);
     } else {
-      navigate(`${BROWSER_ENDPOINT}/login`, { booking: true });
+      navigate(`/login`, { booking: true });
     }
   };
 

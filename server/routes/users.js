@@ -10,6 +10,20 @@ const multer = require("multer");
   }),
 }); */
 
+/* const upload = multer({
+  storage: multerS3({
+    s3: s3,
+    destination: "uploads/",
+    bucket: 'some-bucket',
+    metadata: function (req, file, cb) {
+      cb(null, {fieldName: file.fieldname});
+    },
+    filename: function (req, file, cb) {
+      cb(null, Date.now() + file.originalname);
+    }
+  })
+}) */
+
 const {
   getUsers,
   addUser,
