@@ -20,7 +20,7 @@ const Card = (props) => {
     if (searcher && searcher._id) {
       setBookingExtend(true);
     } else {
-      navigate(`https://do-it-4-me.vercel.app/login`, { booking: true });
+      navigate(`/login`, { booking: true });
     }
   };
 
